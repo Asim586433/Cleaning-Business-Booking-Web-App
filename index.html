@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleClean | Professional Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <i class="fas fa-broom"></i>
+                <span>SparkleClean</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#admin">Admin</a></li>
+                <li><button id="viewBookingsBtn" class="btn-secondary">View My Bookings</button></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1>Professional Cleaning Services</h1>
+                <p class="subtitle">Spotless spaces, stress-free living. Book your cleaning service in minutes.</p>
+                <button class="btn-primary" id="bookNowHero">Book Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Services Section -->
+            <div class="services-section">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Cleaning</h3>
+                        <p>Regular cleaning for your living spaces. Dusting, vacuuming, and sanitization included.</p>
+                        <div class="service-price">From $89</div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Office Cleaning</h3>
+                        <p>Professional cleaning for workplaces. Includes desks, common areas, and restrooms.</p>
+                        <div class="service-price">From $149</div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h3>Deep Cleaning</h3>
+                        <p>Intensive cleaning service. Includes appliances, inside cabinets, and detailed sanitization.</p>
+                        <div class="service-price">From $199</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Book online in less than 2 minutes</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Cleaners</h3>
+                    <p>Background-checked professionals</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Satisfaction</h3>
+                    <p>Quality guaranteed or we re-clean</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="page-section">
+            <h2>Book Your Cleaning Service</h2>
+            <p class="section-subtitle">Fill out the form below to schedule your cleaning</p>
+            
+            <div class="booking-container">
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <!-- Service Selection -->
+                        <div class="form-group">
+                            <label for="serviceType"><i class="fas fa-concierge-bell"></i> Service Type</label>
+                            <select id="serviceType" required>
+                                <option value="">Select a service</option>
+                                <option value="home">Home Cleaning - $89</option>
+                                <option value="office">Office Cleaning - $149</option>
+                                <option value="deep">Deep Cleaning - $199</option>
+                            </select>
+                        </div>
+
+                        <!-- Date Selection -->
+                        <div class="form-group">
+                            <label for="bookingDate"><i class="fas fa-calendar-alt"></i> Date</label>
+                            <input type="date" id="bookingDate" required min="">
+                        </div>
+
+                        <!-- Time Selection -->
+                        <div class="form-group">
+                            <label><i class="fas fa-clock"></i> Time Slot</label>
+                            <div class="time-slots">
+                                <label class="time-slot">
+                                    <input type="radio" name="timeSlot" value="9:00 AM" required>
+                                    <span>9:00 AM</span>
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="timeSlot" value="11:00 AM">
+                                    <span>11:00 AM</span>
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="timeSlot" value="1:00 PM">
+                                    <span>1:00 PM</span>
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="timeSlot" value="3:00 PM">
+                                    <span>3:00 PM</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Customer Details -->
+                        <div class="form-group">
+                            <label for="customerName"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="customerName" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="customerEmail" required placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+                            <textarea id="address" rows="3" required placeholder="Enter your full address"></textarea>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div class="form-group">
+                            <label for="instructions"><i class="fas fa-sticky-note"></i> Special Instructions (Optional)</label>
+                            <textarea id="instructions" rows="2" placeholder="Any specific requirements?"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" id="backToHome">Back</button>
+                            <button type="submit" class="btn-primary">Continue to Payment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <h3><i class="fas fa-receipt"></i> Booking Summary</h3>
+                    <div class="summary-content">
+                        <p class="summary-placeholder">Your booking details will appear here</p>
+                        <div id="summaryDetails" class="hidden">
+                            <div class="summary-item">
+                                <span>Service:</span>
+                                <strong id="summaryService"></strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date:</span>
+                                <strong id="summaryDate"></strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Time:</span>
+                                <strong id="summaryTime"></strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Address:</span>
+                                <strong id="summaryAddress"></strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total:</span>
+                                <strong id="summaryPrice"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Confirmation Message -->
+                    <div id="confirmationMessage" class="hidden">
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Booking Confirmed!</h4>
+                            <p>Your cleaning service has been scheduled.</p>
+                            <p>Confirmation sent to: <span id="confirmEmail"></span></p>
+                            <button class="btn-primary" id="proceedToPayment">Proceed to Payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="page-section">
+            <h2>Payment Information</h2>
+            <p class="section-subtitle">Complete your booking with secure payment</p>
+            
+            <div class="payment-container">
+                <div class="payment-form">
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="cardNumber"><i class="fas fa-credit-card"></i> Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" placeholder="Enter name on card" required>
+                        </div>
+
+                        <div class="payment-security">
+                            <i class="fas fa-lock"></i>
+                            <span>Your payment is secured with SSL encryption</span>
+                        </div>
+
+                        <div class="payment-actions">
+                            <button type="button" class="btn-secondary" id="backToBooking">Back to Booking</button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-lock"></i> Pay Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="payment-summary">
+                    <h3><i class="fas fa-shopping-cart"></i> Order Summary</h3>
+                    <div id="paymentDetails" class="summary-content">
+                        <!-- Payment details loaded from booking -->
+                    </div>
+                    
+                    <!-- Payment Success Message -->
+                    <div id="paymentSuccess" class="hidden">
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Payment Successful!</h4>
+                            <p>Your booking is now confirmed.</p>
+                            <p>Invoice has been sent to Xero.</p>
+                            <p>Confirmation email sent to your inbox.</p>
+                            <button class="btn-primary" id="returnHome">Back to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard Section -->
+        <section id="admin" class="page-section">
+            <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+            <p class="section-subtitle">Manage cleaning service bookings</p>
+            
+            <div class="dashboard-controls">
+                <button class="btn-secondary" id="syncXeroBtn">
+                    <i class="fas fa-sync"></i> Sync with Xero
+                </button>
+                <div class="search-box">
+                    <input type="text" id="searchBookings" placeholder="Search bookings...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="bookings-table-container">
+                <table class="bookings-table">
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Service</th>
+                            <th>Date & Time</th>
+                            <th>Address</th>
+                            <th>Payment Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookingsTableBody">
+                        <!-- Bookings loaded via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon total-bookings">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalBookings">0</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pending-payments">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="pendingPayments">0</h3>
+                        <p>Pending Payments</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon revenue">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalRevenue">$0</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SparkleClean</h3>
+                    <p>Professional cleaning services for homes and offices. Satisfaction guaranteed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sparkleclean.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Fri: 8am-6pm</p>
+                    <p>Sat-Sun: 9am-4pm</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 SparkleClean. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
